@@ -10,7 +10,6 @@ plot1 <- function(){
         
         png(filename = "plot1.png", width = 480, height = 480)
         
-        # font = 2 - using bold font, cex = 0.9 - scaling down font size
         hist(df$Global_active_power, col = "red", main = "Global Active Power", 
                 xlab = "Global Active Power (kilowatts)")
         

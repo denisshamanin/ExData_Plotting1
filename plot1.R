@@ -8,10 +8,12 @@ plot1 <- function(){
                 "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
                 nrows = 2880, na.strings = "?", skip = 66637, stringsAsFactors = FALSE)
         
+        # open png device 
         png(filename = "plot1.png", width = 480, height = 480)
         
         hist(df$Global_active_power, col = "red", main = "Global Active Power", 
                 xlab = "Global Active Power (kilowatts)")
         
+        # close png device
         dev.off()
 }

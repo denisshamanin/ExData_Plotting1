@@ -14,6 +14,7 @@ plot3 <- function(){
         df <- mutate(df, DateTime = paste(Date, Time))
         df <- mutate(df, DateTime = dmy_hms(DateTime))
 
+        # open png device 
         png(filename = "plot3.png", width = 480, height = 480)
         
         plot(df$DateTime, df$Sub_metering_1, type = "n", ylab = "Energy sub metering", xlab = "")
@@ -24,5 +25,6 @@ plot3 <- function(){
                legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
                lty = c(1, 1), lwd = 2)
         
+        # close png device
         dev.off()
 }

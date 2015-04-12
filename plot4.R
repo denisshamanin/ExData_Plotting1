@@ -21,7 +21,7 @@ plot4 <- function(){
         plot(df$DateTime, df$Global_active_power, type="l", ylab = "Global Active Power", xlab = "")
         # graph 2
         plot(df$DateTime, df$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
-
+        # graph 3
         plot(df$DateTime, df$Sub_metering_1, type = "n", ylab = "Energy sub metering", xlab = "")
         lines(df$DateTime, df$Sub_metering_1)
         lines(df$DateTime, df$Sub_metering_2, col = "red")
@@ -30,6 +30,9 @@ plot4 <- function(){
                legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
                lty = c(1, 1), lwd = 2, bty = "n")
         
+        # graph 4
         plot(df$DateTime, df$Global_reactive_power, type = "l", xlab = "datetime")
+        
+        # close png device
         dev.off()
 }
